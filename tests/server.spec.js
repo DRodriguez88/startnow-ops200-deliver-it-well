@@ -37,4 +37,15 @@ describe('server/app.js', function() {
       done();
     });
   });
+
+  it('page says other stuff too', (done) => {
+    chai.request(server)
+      .get('/')
+      .end((err, res) => {
+        expect(err).not.exist;
+        expect(JSON.stringify(res.text)).to.contain('other stuff too');
+        done();
+      });
+    });
+
 })
