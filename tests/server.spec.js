@@ -33,7 +33,7 @@ describe('server/app.js', function() {
     .get('/')
     .end((err, res) => {
       expect(err).not.exist;
-      expect(JSON.stringify(res.text)).to.contain('Look into my eyes and tell me');
+      expect(JSON.stringify(res.text)).to.contain('THING');
       done();
     });
   });
@@ -43,7 +43,7 @@ describe('server/app.js', function() {
       .get('/')
       .end((err, res) => {
         expect(err).not.exist;
-        expect(JSON.stringify(res.text)).to.contain('what it is you see');
+        expect(JSON.stringify(res.text)).to.contain('stuff');
         done();
       });
     });
